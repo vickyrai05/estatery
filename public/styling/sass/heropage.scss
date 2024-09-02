@@ -1,0 +1,84 @@
+@import '../../styling/base/varibles.scss';
+@import '../../styling/base/mixins.scss';
+@import '../../helper/helper.scss';
+
+.hero-page {
+    background: linear-gradient(164.6deg, #9991F4 -16.94%, rgba(224, 222, 247, 0) 124.1%);
+
+    .hero-area {
+        .hero-content {
+            padding: 90px 0;
+
+            p {
+                font-family: "Plus Jakarta Sans", system-ui;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19.36px;
+                text-align: left;
+                color: $black;
+                padding-bottom: 10px;
+
+                svg {
+                    width: 15px;
+                    color: $light_cyan2;
+                    padding-bottom: 5px;
+                }
+            }
+
+            h4 {
+                font-family: "Plus Jakarta Sans", system-ui;
+                font-size: 46px;
+                font-weight: 700;
+                line-height: 55.67px;
+                text-align: left;
+                max-width: 334px;
+                color: $blue;
+                padding-bottom: 24px;
+            }
+            .hero-content-text {
+                position: relative;
+                padding: 0 10px;
+                font-family: "Plus Jakarta Sans", system-ui;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 25px;
+                text-align: left;
+                max-width: 357px;
+                &::before {
+                    content: "";
+                    width: 1.2px;
+                    height: 100%;
+                    background-color: $black2;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            .search-group{
+                padding-top: 40px;
+                .search-tabs{
+                    display: flex;
+                    gap:5px;
+                    .tab-item1{
+                       width: 95px;
+                       height: 33px;
+                       background-color: $white;
+                       border-radius: 6px 6px 0px 0px;
+                       @include justifyCenter;
+                       color: $black3;
+                    }
+                    .tab-item2{
+                       width: 95px;
+                       height: 33px;
+                       border: 0.77px solid $white;
+                       background-color:$white;
+                       opacity: 0.4;
+                       border-radius: 6px  6px 0px 0px;
+                       @include justifyCenter;
+                       color: $light_cyan3;
+                    }
+                }
+            }
+        }
+    }
+}
