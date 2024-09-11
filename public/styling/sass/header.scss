@@ -1,82 +1,468 @@
-@import '../../styling/base/varibles.scss';
-@import '../../styling/base/mixins.scss';
+@import "../../styling/base/varibles.scss";
+@import "../../styling/base/mixins.scss";
 
 header {
-    padding: 20px 0;
-
-    .header-area {
-        @include clearFix;
-        display: flex;
-        align-items: center;
-
-        .left-area {
-            float: left;
-            width: 133px;
-
-            .logo {
-                width: 100%;
-                height: 40px;
-
-                img {
-                    @include img;
-                }
-            }
+  padding: 30px 0;
+  .header-area {
+    @include clearFix;
+    display: flex;
+    align-items: center;
+    .left-area {
+      float: left;
+      width: 133px;
+      .logo {
+        width: 100%;
+        height: 40px;
+        img {
+          @include img;
         }
-
-        .right {
-            float: right;
-            width: calc(100% - 133px);
-            @include clearFix;
-            display: flex;
-            align-items: center;
-            .inner-left {
-                float: left;
-                width: calc(100% - 106px);
-
-                nav {
-                    ul {
-                        margin: 0;
-                        padding: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        li {
-                            display: inline-block;
-                            padding-left: 24px;
-                            padding-right: 24px;
-
-                             &:first-child{
-                                padding-left: 0;
-                            }
-                            &:last-child {
-                                padding-right: 0;
-                            }
-
-                            a {
-                                color: $primarycolor;
-                                font-size: 16px;
-                                font-weight: 500;
-                                line-height: 24px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .inner-right {
-                float: right;
-                width: 106px;
-
-                .login_btn {
-                    width: 100%;
-                    height: 40px;
-                    background: linear-gradient(90deg, #7E81E7 -12.81%, #0F40B2 100%);
-                    border-radius: 6px;
-                    color: $white;
-                    @include justifyCenter;
-                }
-            }
-        }
+      }
     }
+
+    .right {
+      float: right;
+      width: calc(100% - 133px);
+      @include clearFix;
+      display: flex;
+      align-items: center;
+      .inner-left {
+        float: left;
+        width: calc(100% - 106px);
+
+        nav {
+          ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+              display: inline-block;
+              padding-left: 24px;
+              padding-right: 24px;
+              color: $black4;
+
+              &:first-child {
+                padding-left: 0;
+              }
+              &:last-child {
+                padding-right: 0;
+              }
+
+              a {
+                color: $primarycolor;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                transition: all 0.5s ease;
+
+                &:hover {
+                  color: $light_cyan2;
+                  transition: all 0.2s ease;
+                }
+              }
+            }
+            .linkactive {
+              color: $blue;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 27px;
+            }
+          }
+        }
+      }
+
+      .inner-right {
+        float: right;
+        width: 106px;
+        .login_btn {
+          position: relative;
+          width: 100%;
+          height: 40px;
+          border-radius: 6px;
+          color: $white;
+          @include justifyCenter;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #7e81e7 -12.81%, #0f40b2 100%);
+            transition: opacity 1s ease;
+            z-index: -1;
+            opacity: 1;
+          }
+
+          &:hover::before {
+            background: linear-gradient(90deg, #61639f -12.81%, #03143a 100%);
+            opacity: 0.7;
+          }
+          z-index: 4;
+        }
+      }
+    }
+    .mobile_menus {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      z-index: 555;
+      top: 60px;
+      background-color: $white;
+      left: 0;
+      display: none;
+      ul {
+        li {
+          padding-top: 10px;
+          padding-left: 20px;
+          font-size: 15px;
+          color: $primarycolor;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          &:hover {
+            color: $light_cyan2;
+            transition: all 0.2s ease;
+          }
+        }
+      }
+    }
+
+    .bars {
+      display: none;
+      svg {
+        font-size: 20px;
+        color: $light_cyan2;
+      }
+    }
+  }
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    padding: 20px 0;
+    .header-area {
+      justify-content: space-between;
+      .right {
+        .inner-left {
+          width: calc(100% - 96px);
+          nav {
+            ul {
+              li {
+                padding-left: 14px;
+                padding-right: 14px;
+                a {
+                  font-size: 16px;
+                }
+              }
+              .linkactive {
+                font-size: 17px;
+                line-height: 27px;
+              }
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+
+        .inner-right {
+          width: 96px;
+          a {
+            font-size: 14px;
+            .login_btn {
+              height: 38px;
+            }
+          }
+        }
+      }
+      .bars {
+        width: 22px;
+        display: none;
+      }
+      .mobile_menus {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    padding: 20px 0;
+    .header-area {
+      justify-content: space-between;
+      .left-area {
+        float: left;
+        width: 113px;
+
+        .logo {
+          width: 100%;
+          height: 30px;
+
+          img {
+            @include img;
+          }
+        }
+      }
+      .right {
+        .inner-left {
+          width: calc(100% - 76px);
+          nav {
+            ul {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+                a {
+                  font-size: 13px;
+                }
+              }
+              .linkactive {
+                font-size: 15px;
+              }
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+        .inner-right {
+          width: 76px;
+          a {
+            font-size: 14px;
+            .login_btn {
+              height: 34px;
+            }
+          }
+        }
+      }
+      .bars {
+        width: 22px;
+        display: none;
+      }
+      .mobile_menus {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  header {
+    padding: 20px 0;
+    .header-area {
+      justify-content: space-between;
+      .left-area {
+        float: left;
+        width: 123px;
+        .logo {
+          width: 100%;
+          height: 35px;
+          img {
+            @include img;
+          }
+        }
+      }
+      .right {
+        .inner-left {
+          width: calc(100% - 76px);
+          display: none;
+          nav {
+            ul {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+                a {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+        .inner-right {
+          width: 76px;
+          display: none;
+          a {
+            font-size: 14px;
+            .login_btn {
+              height: 34px;
+            }
+          }
+        }
+      }
+      .bars {
+        width: 22px;
+        display: block;
+      }
+      .mobile_menus {
+        display: block;
+      }
+      .active {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  header {
+    padding: 14px 0;
+    .header-area {
+      justify-content: space-between;
+      .left-area {
+        float: left;
+        width: 123px;
+        .logo {
+          width: 100%;
+          height: 35px;
+          img {
+            @include img;
+          }
+        }
+      }
+      .right {
+        .inner-left {
+          width: calc(100% - 76px);
+          display: none;
+          nav {
+            ul {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+                a {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+        .inner-right {
+          width: 76px;
+          display: none;
+          a {
+            font-size: 14px;
+            .login_btn {
+              height: 34px;
+            }
+          }
+        }
+      }
+      .bars {
+        width: 22px;
+        display: block;
+      }
+      .mobile_menus {
+        top: 60px;
+        display: block;
+        ul {
+          li {
+            padding-left: 23px;
+          }
+        }
+      }
+      .active {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  header {
+    padding: 20px 0;
+    .header-area {
+      justify-content: space-between;
+      .left-area {
+        float: left;
+        width: 123px;
+        .logo {
+          width: 100%;
+          height: 35px;
+          img {
+            @include img;
+          }
+        }
+      }
+      .right {
+        .inner-left {
+          width: calc(100% - 76px);
+          display: none;
+          nav {
+            ul {
+              li {
+                padding-left: 10px;
+                padding-right: 10px;
+                a {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+        .inner-right {
+          width: 76px;
+          display: none;
+          a {
+            font-size: 14px;
+            .login_btn {
+              height: 34px;
+            }
+          }
+        }
+      }
+      .bars {
+        width: 22px;
+        display: block;
+      }
+      .mobile_menus {
+        display: block;
+        ul {
+          li {
+            padding-left: 23px;
+          }
+        }
+      }
+      .active {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
 }

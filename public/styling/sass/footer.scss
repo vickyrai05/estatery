@@ -1,188 +1,867 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import '../../styling/base/varibles.scss';
-@import '../../styling/base/mixins.scss';
-@import '../../helper/helper.scss';
-
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "../../styling/base/varibles.scss";
+@import "../../styling/base/mixins.scss";
 
 footer {
+  .footer-top {
+    padding: 62px 0 70px 0;
+    background: linear-gradient(
+      164.6deg,
+      #9991f4 -16.94%,
+      rgba(224, 222, 247, 0) 124.1%
+    );
+
+    .aboutarea {
+      h6 {
+        color: $dark_navy;
+        padding-bottom: 3px;
+        font-family: "Plus Jakarta Sans", system-ui;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+      }
+
+      .content {
+        font-family: "Plus Jakarta Sans", system-ui;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: left;
+        color: $light_navy;
+        padding-bottom: 14px;
+      }
+
+      .address {
+        font-family: "Plus Jakarta Sans", system-ui;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: left;
+        color: $dark_navy;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .footer_social {
+      .left {
+        width: 100%;
+        h6 {
+          color: $dark_navy;
+          padding-bottom: 3px;
+          font-family: "Plus Jakarta Sans", system-ui;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 28px;
+        }
+
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            padding-top: 5px;
+            font-family: "Plus Jakarta Sans", system-ui;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            transition: 0.2s ease;
+            &:hover {
+              color: $light_navy;
+            }
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        h6 {
+          color: $dark_navy;
+          padding-bottom: 3px;
+          font-family: "Plus Jakarta Sans", system-ui;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 28px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            padding-top: 5px;
+            font-family: "Plus Jakarta Sans", system-ui;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            transition: 0.2s ease;
+            &:hover {
+              color: $light_navy;
+            }
+          }
+        }
+      }
+    }
+    .form_area {
+      border-radius: 6px;
+      background-color: $white;
+      padding: 30px;
+
+      h4 {
+        font-family: "Plus Jakarta Sans", system-ui;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        padding-bottom: 8px;
+        color: $dark_navy;
+      }
+
+      p {
+        font-family: "Plus Jakarta Sans", system-ui;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        color: $light_navy;
+        padding-bottom: 17px;
+      }
+
+      .form-group {
+        position: relative;
+        padding: 7px;
+        border: 1px solid $borderlight;
+        border-radius: 6px;
+        margin-bottom: 12px;
+
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding-right: 32px;
+          color: $light_cyan;
+          padding-left: 10px;
+          &::placeholder {
+            color: $light_cyan;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 10px;
+          font-size: 20px;
+          right: 0;
+          padding-right: 10px;
+          color: $light_cyan;
+        }
+      }
+
+      .btn_subscribe {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border-radius: 6px;
+        color: $white;
+        @include justifyCenter;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(90deg, #7e81e7 -12.81%, #0f40b2 100%);
+          transition: opacity 1s ease;
+          z-index: -1;
+          opacity: 1;
+        }
+
+        &:hover::before {
+          background: linear-gradient(90deg, #61639f -12.81%, #03143a 100%);
+          opacity: 0.7;
+        }
+        z-index: 4;
+      }
+    }
+  }
+
+  .footer-bottom {
+    background: linear-gradient(90deg, #9890f3 0%, #093daf 100%);
+    padding: 28px 0;
+    .footer-bootom-area {
+      .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+          width: 134px;
+          height: 40px;
+
+          img {
+            @include img;
+          }
+        }
+
+        .address {
+          font-family: "Plus Jakarta Sans", system-ui;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: right;
+          color: $white;
+        }
+      }
+      .right {
+        ul {
+          padding: 0;
+          margin: 0;
+          text-align: end;
+          position: relative;
+
+          li {
+            display: inline-block;
+            font-family: "Plus Jakarta Sans", system-ui;
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $white;
+            padding-right: 15px;
+            transition: all 0.4s ease;
+            &:last-child {
+              padding-right: 0;
+              &::after {
+                content: "";
+                position: absolute;
+                right: 104px;
+                width: 1.2px;
+                height: 20px;
+                background-color: #fff;
+                top: 9px;
+              }
+            }
+            &:nth-child(1) {
+              &::after {
+                content: "";
+                position: absolute;
+                right: 216px;
+                width: 1.2px;
+                height: 20px;
+                background-color: #fff;
+                top: 9px;
+              }
+            }
+            &:hover {
+              color: $primarycolor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer {
     .footer-top {
-        padding: 62px 0 70px 0;
-        background: linear-gradient(164.6deg, #9991F4 -16.94%, rgba(224, 222, 247, 0) 124.1%);
+      padding: 52px 0 60px 0;
+      .aboutarea {
+        h6 {
+          padding-bottom: 3px;
+          font-size: 15px;
+        }
+        .content {
+          font-size: 15px;
+          padding-bottom: 12px;
+        }
+        .address {
+          font-size: 14px;
+        }
+      }
+      .footer_social {
+        .left {
+          h6 {
+            font-size: 16px;
+          }
 
-        .aboutarea {
-            h6 {
-                color: $dark_navy;
-                padding-bottom: 3px;
-                font-family: "Plus Jakarta Sans", system-ui;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 28px;
-                text-align: left;
+          ul {
+            li {
+              font-size: 14px;
             }
+          }
+        }
+        .right {
+          h6 {
+            font-size: 16px;
+          }
 
-            .content {
-                font-family: "Plus Jakarta Sans", system-ui;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 28px;
-                text-align: left;
-                color: $light_navy;
-                padding-bottom: 14px;
+          ul {
+            li {
+              font-size: 14px;
             }
+          }
+        }
+      }
 
-            .address {
-                font-family: "Plus Jakarta Sans", system-ui;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 28px;
-                text-align: left;
-                color: $dark_navy;
+      .form_area {
+        padding: 22px;
 
-                span {
-                    font-weight: 600;
-                }
-            }
+        h4 {
+          font-size: 18px;
+          padding-bottom: 8px;
         }
 
-        .footer_social {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 60px;
+        p {
+          font-size: 14px;
+          padding-bottom: 16px;
+        }
+        .form-group {
+          padding: 5px;
+          margin-bottom: 12px;
 
-            h6 {
-                color: $dark_navy;
-                padding-bottom: 3px;
-                font-family: "Plus Jakarta Sans", system-ui;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 28px;
-            }
-
-            ul {
-                padding: 0;
-                margin: 0;
-
-                li {
-                    padding-top: 5px;
-                    font-family: "Plus Jakarta Sans", system-ui;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 24px;
-                }
-            }
+          input {
+            padding-right: 22px;
+          }
+          svg {
+            padding-right: 5px;
+            font-size: 18px;
+          }
         }
 
-        .form_area {
-            border-radius: 6px;
-            background-color: $white;
-            padding: 30px;
-
-            h4 {
-                font-family: "Plus Jakarta Sans", system-ui;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 24px;
-                text-align: center;
-                padding-bottom: 8px;
-                color: $dark_navy;
-            }
-
-            p {
-                font-family: "Plus Jakarta Sans", system-ui;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                text-align: center;
-                color: $light_navy;
-                padding-bottom: 17px;
-            }
-
-            .form-group {
-                position: relative;
-                padding: 7px;
-                border: 1px solid $borderlight;
-                border-radius: 6px;
-                margin-bottom: 12px;
-
-                input {
-                    width: 100%;
-                    border: none;
-                    outline: none;
-                    padding-right: 32px;
-                    color: $light_cyan;
-
-                    &::placeholder {
-                        color: $light_cyan;
-                    }
-                }
-                svg {
-                    position: absolute;
-                    top: 10px;
-                    width: 29px;
-                    right: 0;
-                    padding-right: 10px;
-                    color: $light_cyan;
-                }
-            }
-
-            .btn_subscribe {
-                background: linear-gradient(90deg, #7E81E7 -12.81%, #0F40B2 100%);
-                color: $white;
-                text-align: center;
-                padding: 9px 0;
-                border-radius: 6px;
-            }
+        .btn_subscribe {
+          padding: 8px 0;
         }
+      }
     }
 
     .footer-bottom {
-        background: linear-gradient(90deg, #9890F3 0%, #093DAF 100%);
-        padding: 28px 0;
-        .footer-bootom-area {
-            .left {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+      padding: 25px 0;
+      .footer-bootom-area {
+        .left {
+          .logo {
+            width: 114px;
+            height: 36px;
+          }
 
-                .logo {
-                    width: 134px;
-                    height: 40px;
-
-                    img {
-                        @include img;
-                    }
-                }
-
-                .address {
-                    font-family: "Plus Jakarta Sans", system-ui;
-                    font-size: 15px;
-                    font-weight: 400;
-                    line-height: 24px;
-                    text-align: right;
-                    color: $white;
-                }
-            }
-            .right {
-                ul {
-                    padding: 0;
-                    margin: 0;
-                    text-align: end;
-                    li {
-                        display: inline-block;
-                        font-family: "Plus Jakarta Sans", system-ui;
-                        padding-top: 7px;
-                        font-size: 15px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        color: $white;
-                        padding-right: 10px;
-                         &:last-child {
-                            padding-right: 0;
-                        }
-                    }
-                }
-            }
+          .address {
+            font-size: 14px;
+          }
         }
+        .right {
+          ul {
+            li {
+              font-size: 14px;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+  footer {
+    .footer-top {
+      padding: 42px 0 50px 0;
+      .aboutarea {
+        h6 {
+          padding-bottom: 3px;
+          font-size: 16px;
+        }
+        .content {
+          font-size: 14px;
+        }
+        .address {
+          font-size: 14px;
+        }
+      }
+      .footer_social {
+        .left {
+          h6 {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 14px;
+            }
+          }
+        }
+        .right {
+          width: 100%;
+          h6 {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .form_area {
+        padding: 17px;
+
+        h4 {
+          font-size: 17px;
+          padding-bottom: 7px;
+        }
+
+        p {
+          font-size: 13.5px;
+          padding-bottom: 15px;
+          line-height: 19px;
+        }
+        .form-group {
+          padding: 4px;
+          margin-bottom: 11px;
+
+          input {
+            padding-right: 22px;
+            font-size: 13px;
+            &::placeholder {
+              font-size: 13px;
+            }
+          }
+          svg {
+            padding-right: 5px;
+            font-size: 15px;
+          }
+        }
+
+        .btn_subscribe {
+          padding: 6px 0;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      .footer-bootom-area {
+        .left {
+          .logo {
+            width: 99px;
+            height: 32px;
+          }
+          .address {
+            font-size: 13px;
+          }
+        }
+        .right {
+          ul {
+            li {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  footer {
+    .footer-top {
+      padding: 42px 0 50px 0;
+      .aboutarea {
+        h6 {
+          padding-bottom: 3px;
+          font-size: 16px;
+        }
+        .content {
+          font-size: 14px;
+          line-height: 24px;
+          padding-bottom: 10px;
+        }
+        .address {
+          font-size: 14px;
+        }
+      }
+      .footer_social {
+        .left {
+          h6 {
+            font-size: 16px;
+          }
+          ul {
+            li {
+              font-size: 14px;
+              line-height: 24px;
+              &:hover {
+                color: $light_navy;
+              }
+            }
+          }
+        }
+        .right {
+          h6 {
+            font-size: 16px;
+          }
+          ul {
+            li {
+              font-size: 14px;
+              line-height: 24px;
+              &:hover {
+                color: $light_navy;
+              }
+            }
+          }
+        }
+      }
+
+      .form_area {
+        max-width: 440px;
+        padding: 25px 28px;
+        margin-top: 20px;
+        h4 {
+          font-size: 20px;
+          padding-bottom: 13px;
+        }
+
+        p {
+          font-size: 17px;
+          padding-bottom: 15px;
+        }
+        .form-group {
+          padding: 5px;
+          margin-bottom: 15px;
+
+          input {
+            padding-right: 32px;
+            font-size: 15px;
+            padding-left: 10px;
+            &::placeholder {
+              font-size: 15px;
+            }
+          }
+          svg {
+            padding-right: 12px;
+            font-size: 18px;
+          }
+        }
+
+        .btn_subscribe {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      .footer-bootom-area {
+        .left {
+          .logo {
+            width: 109px;
+            height: 35px;
+          }
+          .address {
+            font-size: 14px;
+          }
+        }
+        .right {
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  footer {
+    .footer-top {
+      padding: 30px 0 20px 0;
+      .aboutarea {
+        h6 {
+          padding-bottom: unset;
+          font-size: 14px;
+          line-height: 22px;
+        }
+        .content {
+          font-size: 13.5px;
+          line-height: 24px;
+          padding-bottom: 10px;
+        }
+        .address {
+          font-size: 14px;
+        }
+      }
+      .footer_social {
+        .left {
+          h6 {
+            padding-bottom: unset;
+            font-size: 15px;
+            text-align: start;
+          }
+          ul {
+            li {
+              font-size: 13px;
+              text-align: start;
+            }
+          }
+        }
+        .right {
+          h6 {
+            padding-bottom: 3px;
+            font-size: 15px;
+            text-align: start;
+          }
+
+          ul {
+            li {
+              font-size: 13px;
+              text-align: start;
+            }
+          }
+        }
+      }
+
+      .form_area {
+        padding: 20px 10px;
+        margin-top: 20px;
+
+        h4 {
+          font-size: 19px;
+          padding-bottom: 13px;
+        }
+
+        p {
+          font-size: 14px;
+          padding-bottom: 15px;
+        }
+        .form-group {
+          padding: 4px;
+          margin-bottom: 15px;
+
+          input {
+            padding-right: 29px;
+            font-size: 14px;
+            padding-left: 10px;
+            &::placeholder {
+              font-size: 14px;
+            }
+          }
+          svg {
+            padding-right: 12px;
+            font-size: 16px;
+          }
+        }
+
+        .btn_subscribe {
+          padding: 7px 0;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      .footer-bootom-area {
+        .left {
+          flex-direction: column;
+          .logo {
+            align-self: center;
+            width: 97px;
+            height: 30px;
+          }
+          .address {
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+        .right {
+          ul {
+            text-align: center;
+            li {
+              padding-top: 0;
+              font-size: 13px;
+              text-align: center;
+              &:nth-child(1) {
+                &::after {
+                  right: 227px;
+                  width: 1.2px;
+                  height: 15px;
+                  top: 6px;
+                }
+              }
+              &:last-child {
+                &::after {
+                  right: 128px;
+                  width: 1.2px;
+                  height: 15px;
+                  top: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  footer {
+    .footer-top {
+      padding: 30px 0 20px 0;
+      .aboutarea {
+        h6 {
+          padding-bottom: unset;
+          font-size: 14px;
+          line-height: 22px;
+        }
+        .content {
+          font-size: 13.5px;
+          line-height: 24px;
+          padding-bottom: 10px;
+        }
+        .address {
+          font-size: 14px;
+        }
+      }
+      .footer_social {
+        .left {
+          h6 {
+            padding-bottom: unset;
+            font-size: 15px;
+            text-align: start;
+          }
+          ul {
+            li {
+              font-size: 13px;
+              text-align: start;
+            }
+          }
+        }
+        .right {
+          h6 {
+            padding-bottom: 3px;
+            font-size: 15px;
+            text-align: start;
+          }
+
+          ul {
+            li {
+              font-size: 13px;
+              text-align: start;
+            }
+          }
+        }
+      }
+
+      .form_area {
+        padding: 20px 10px;
+        margin-top: 20px;
+
+        h4 {
+          font-size: 19px;
+          padding-bottom: 13px;
+        }
+
+        p {
+          font-size: 14px;
+          padding-bottom: 15px;
+        }
+        .form-group {
+          padding: 4px;
+          margin-bottom: 15px;
+
+          input {
+            padding-right: 29px;
+            font-size: 14px;
+            padding-left: 10px;
+            &::placeholder {
+              font-size: 14px;
+            }
+          }
+          svg {
+            padding-right: 12px;
+            font-size: 16px;
+          }
+        }
+
+        .btn_subscribe {
+          padding: 7px 0;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      .footer-bootom-area {
+        .left {
+          flex-direction: column;
+          .logo {
+            align-self: center;
+            width: 97px;
+            height: 30px;
+          }
+          .address {
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+        .right {
+          ul {
+            text-align: center;
+            li {
+              padding-top: 0;
+              font-size: 13px;
+              text-align: center;
+              &:nth-child(1) {
+                &::after {
+                  right: 227px;
+                  width: 1.2px;
+                  height: 15px;
+                  top: 6px;
+                }
+              }
+              &:last-child {
+                &::after {
+                  right: 128px;
+                  width: 1.2px;
+                  height: 15px;
+                  top: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
 }

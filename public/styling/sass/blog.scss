@@ -1,0 +1,663 @@
+@import "../base//mixins.scss";
+@import "../base//varibles.scss";
+
+.blog_section {
+  padding-bottom: 90px;
+  .blog_area {
+    padding-top: 30px;
+    .top_blog_area {
+      padding-bottom: 60px;
+      .left-side {
+        .image_box {
+          width: 100%;
+          height: 360px;
+          overflow: hidden;
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+          img {
+            transition: transform 0.9s ease;
+            @include img;
+          }
+        }
+      }
+      .right-side {
+        .content {
+          .sub_heading {
+            @include primary_font;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: left;
+            color: $blue;
+            padding-bottom: 15px;
+            .top-date {
+              padding-left: 10px;
+              &::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background-color: $blue;
+                position: relative;
+                top: -2px;
+                left: -4px;
+                display: inline-block;
+                border-radius: 100px;
+              }
+            }
+          }
+          .heading {
+            display: flex;
+            padding-bottom: 15px;
+            .inner-left {
+              width: calc(100% - 20px);
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 32px;
+              text-align: left;
+              color: $black2;
+            }
+            .inner-right {
+              width: 20px;
+              text-align: end;
+              font-size: 17px;
+              line-height: 32px;
+              color: $black4;
+              transition: all 0.2s ease;
+              &:hover {
+                color: $light_cyan2;
+              }
+            }
+          }
+          .paragraph-heading {
+            color: $black6;
+            @include primary_font;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+          }
+        }
+      }
+    }
+    .bottom_blog_area {
+      .blog_heading {
+        .heading-main {
+          padding-bottom: 40px;
+          @include primary_font;
+          color: $black4;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 32px;
+          text-align: left;
+          transition: all 0.5s ease;
+          &:hover {
+            color: $light_cyan2;
+          }
+        }
+      }
+      .blogs-card-area {
+        border-bottom: 1.2px solid #eaecf0;
+        margin-bottom: 40px;
+        .blog-card {
+          padding-bottom: 60px;
+
+          .image_box {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            padding-bottom: 20px;
+            &:hover {
+              img {
+                transform: scale(1.1);
+              }
+            }
+            img {
+              @include img;
+              transition: transform 0.9s ease;
+            }
+            .heart_icon {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              .fillheart {
+                font-size: 30px;
+              }
+              .unfill-heart {
+                font-size: 30px;
+                color: $red;
+              }
+            }
+          }
+          .listed {
+            @include primary_font;
+            color: $blue;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: left;
+            padding-bottom: 15px;
+            .card_date {
+              padding-left: 10px;
+              &::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background-color: $blue;
+                position: relative;
+                top: -2px;
+                left: -4px;
+                display: inline-block;
+                border-radius: 100px;
+              }
+            }
+          }
+          .title {
+            display: flex;
+            padding-bottom: 15px;
+            .title-left {
+              width: calc(100% - 25px);
+              @include primary_font;
+              font-size: 22px;
+              font-weight: 600;
+              line-height: 32px;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+            .title-right {
+              width: 25px;
+              text-align: end;
+              font-size: 17px;
+              line-height: 32px;
+              color: $black4;
+              transition: all 0.2s ease;
+              &:hover {
+                color: $light_cyan2;
+              }
+            }
+            .description {
+              @include primary_font;
+              color: $black6;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .prev-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s ease;
+        font-size: 17px;
+        &:hover {
+          color: $light_cyan2;
+        }
+      }
+      .page_number {
+        display: flex;
+        align-items: center;
+      }
+      .next-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s ease;
+        font-size: 17px;
+        &:hover {
+          color: $light_cyan2;
+        }
+      }
+      .active {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: $white3;
+        color: $light_cyan2;
+        font-size: 17px;
+        @include justifyCenter;
+        margin: 0 10px;
+      }
+      .non-active {
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .blog_section {
+    padding-bottom: 60px;
+    .blog_area {
+      padding-top: 20px;
+      .top_blog_area {
+        padding-bottom: 40px;
+        .left-side {
+          .image_box {
+            height: 380px;
+          }
+        }
+      }
+      .bottom_blog_area {
+        .blogs-card-area {
+          margin-bottom: 30px;
+          .blog-card {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog_section {
+    padding-bottom: 40px;
+    .blog_area {
+      padding-top: 25px;
+      .top_blog_area {
+        padding-bottom: 40px;
+        .left-side {
+          .image_box {
+            height: 396px;
+          }
+        }
+        .right-side {
+          .content {
+            .sub_heading {
+              padding-bottom: 7px;
+            }
+            .heading {
+              display: flex;
+              padding-bottom: 10px;
+              .inner-left {
+                font-size: 22px;
+              }
+            }
+            .paragraph-heading {
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+      .bottom_blog_area {
+        .blog_heading {
+          .heading-main {
+            padding-bottom: 30px;
+            font-size: 22px;
+          }
+        }
+        .blogs-card-area {
+          margin-bottom: 30px;
+          .blog-card {
+            padding-bottom: 40px;
+            .image_box {
+              height: 220px;
+              padding-bottom: 15px;
+              .heart_icon {
+                .fillheart {
+                  font-size: 26px;
+                }
+                .unfill-heart {
+                  font-size: 26px;
+                }
+              }
+            }
+            .listed {
+              font-size: 14px;
+              line-height: 18px;
+              padding-bottom: 10px;
+            }
+            .title {
+              padding-bottom: 10px;
+              .title-left {
+                font-size: 20px;
+                line-height: 28px;
+              }
+              .description {
+                font-size: 15px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .pagination {
+        .prev-btn {
+          font-size: 15px;
+        }
+        .next-btn {
+          font-size: 15px;
+        }
+        .active {
+          width: 35px;
+          height: 35px;
+          font-size: 16px;
+        }
+        .non-active {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .blog_section {
+    padding-bottom: 30px;
+    .blog_area {
+      padding-top: 10px;
+      .top_blog_area {
+        padding-bottom: 20px;
+        .left-side {
+          .image_box {
+            height: 320px;
+            padding-bottom: 20px;
+          }
+        }
+        .right-side {
+          .content {
+            .sub_heading {
+              padding-bottom: 7px;
+            }
+            .heading {
+              padding-bottom: 10px;
+              .inner-left {
+                font-size: 20px;
+              }
+            }
+            .paragraph-heading {
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+      .bottom_blog_area {
+        .blog_heading {
+          .heading-main {
+            padding-bottom: 20px;
+            font-size: 20px;
+          }
+        }
+        .blogs-card-area {
+          margin-bottom: 30px;
+          .blog-card {
+            padding-bottom: 40px;
+            .image_box {
+              height: 200px;
+              padding-bottom: 15px;
+              .heart_icon {
+                .fillheart {
+                  font-size: 24px;
+                }
+                .unfill-heart {
+                  font-size: 24px;
+                }
+              }
+            }
+            .listed {
+              font-size: 14px;
+              line-height: 18px;
+              padding-bottom: 8px;
+            }
+            .title {
+              padding-bottom: 8px;
+              .title-left {
+                font-size: 18px;
+                line-height: 25px;
+              }
+              .description {
+                font-size: 15px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .pagination {
+        .prev-btn {
+          font-size: 15px;
+        }
+        .next-btn {
+          font-size: 15px;
+        }
+        .active {
+          width: 35px;
+          height: 35px;
+          font-size: 16px;
+        }
+        .non-active {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  .blog_section {
+    padding-bottom: 20px;
+    .blog_area {
+      padding-top: 10px;
+      .top_blog_area {
+        padding-bottom: 20px;
+        .left-side {
+          .image_box {
+            height: 280px;
+            padding-bottom: 20px;
+          }
+        }
+        .right-side {
+          .content {
+            .sub_heading {
+              padding-bottom: 7px;
+            }
+            .heading {
+              padding-bottom: 10px;
+              .inner-left {
+                font-size: 19px;
+                line-height: 25px;
+              }
+            }
+            .paragraph-heading {
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+      .bottom_blog_area {
+        .blog_heading {
+          .heading-main {
+            padding-bottom: 20px;
+            font-size: 19px;
+          }
+        }
+        .blogs-card-area {
+          margin-bottom: 20px;
+          .blog-card {
+            padding-bottom: 30px;
+            .image_box {
+              height: 190px;
+              padding-bottom: 15px;
+              .heart_icon {
+                .fillheart {
+                  font-size: 24px;
+                }
+                .unfill-heart {
+                  font-size: 24px;
+                }
+              }
+            }
+            .listed {
+              font-size: 14px;
+              line-height: 18px;
+              padding-bottom: 8px;
+            }
+            .title {
+              padding-bottom: 8px;
+              .title-left {
+                font-size: 17px;
+                line-height: 25px;
+              }
+              .description {
+                font-size: 15px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .pagination {
+        .prev-btn {
+          font-size: 15px;
+        }
+        .next-btn {
+          font-size: 15px;
+        }
+        .active {
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+        }
+        .non-active {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  .blog_section {
+    padding-bottom: 20px;
+    .blog_area {
+      padding-top: 10px;
+      .top_blog_area {
+        padding-bottom: 20px;
+        .left-side {
+          .image_box {
+            height: 280px;
+            padding-bottom: 20px;
+          }
+        }
+        .right-side {
+          .content {
+            .sub_heading {
+              padding-bottom: 7px;
+            }
+            .heading {
+              padding-bottom: 10px;
+              .inner-left {
+                font-size: 19px;
+                line-height: 25px;
+              }
+            }
+            .paragraph-heading {
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+      .bottom_blog_area {
+        .blog_heading {
+          .heading-main {
+            padding-bottom: 20px;
+            font-size: 19px;
+          }
+        }
+        .blogs-card-area {
+          margin-bottom: 20px;
+          .blog-card {
+            padding-bottom: 30px;
+            .image_box {
+              height: 190px;
+              padding-bottom: 15px;
+              .heart_icon {
+                .fillheart {
+                  font-size: 24px;
+                }
+                .unfill-heart {
+                  font-size: 24px;
+                }
+              }
+            }
+            .listed {
+              font-size: 14px;
+              line-height: 18px;
+              padding-bottom: 8px;
+            }
+            .title {
+              padding-bottom: 8px;
+              .title-left {
+                font-size: 17px;
+                line-height: 25px;
+              }
+              .description {
+                font-size: 15px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .pagination {
+        .prev-btn {
+          font-size: 15px;
+        }
+        .next-btn {
+          font-size: 15px;
+        }
+        .active {
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+        }
+        .non-active {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+}

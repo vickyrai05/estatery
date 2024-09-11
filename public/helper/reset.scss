@@ -1,0 +1,199 @@
+@import '../styling/base/mixins.scss';
+@import '../styling/base/varibles.scss';
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+// body{
+// 	background-color: $body;
+// }
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 27px;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+	@include transition(all .3s ease);
+	&:hover{
+		text-decoration: none;
+		outline: none;
+	}
+	&:focus{
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+.btn{
+	border: 0;
+	box-shadow: none;
+	text-decoration: none;
+	outline: none;
+	&:hover{
+		box-shadow: none;
+		text-decoration: none;
+		outline: none;		
+	}
+	&:focus{
+		box-shadow: none;
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	li{
+		list-style: none;
+		
+	}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+
+.list-inline{
+	margin: 0;
+	padding: 0;
+	@include clearfix();
+	li{
+		float: left;
+		a{
+			display: inline-block;
+		}
+	}
+}
+label{
+	padding-bottom: 15px;
+}
+.form-control{
+	border-radius: 20px;
+	box-shadow: none;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	background-color: $white;
+	height: 45px;
+	padding: 0 30px;
+	&:hover{
+		box-shadow: none;
+		text-decoration: none;
+		outline: none;
+		background-color: $white;
+	}
+	&:focus{
+		box-shadow: none;
+		background-color: $white;
+		text-decoration: none;
+		outline: none;
+	}
+}
+.form-group{
+	margin-bottom: 15px;
+	textarea{
+		height: 150px;
+		border-radius: 20px;
+		padding-top: 10px;
+	}
+}
+.nodata{
+	img{
+		width: 500px;
+		object-fit: cover;
+		max-width: 100%;
+	}
+}
+
+
+
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+	.container {
+		max-width: 1230px;
+	}
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+	.container {
+		max-width: 1230px;
+	}
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+	
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container{
+		max-width: 100%;
+	}
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+	.container{
+		max-width: 100%;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 544px) and (max-width: 767px) {
+	.container{
+		min-width: 100%;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 543px) {
+	.container{
+		max-width: 100%;
+	}
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+	.container{
+		max-width: 100%;
+	}
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+    
+}

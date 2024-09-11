@@ -1,0 +1,336 @@
+@import "../base/mixins.scss";
+@import "../base/varibles.scss";
+
+.cities_section {
+  padding-bottom: 90px;
+  .city_area {
+    .content {
+      text-align: center;
+      padding-bottom: 60px;
+      .heading {
+        @include primary_font;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 52px;
+        text-align: center;
+        color: $black4;
+        padding-bottom: 10px;
+      }
+      .sub_heading {
+        @include primary_font;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25.6px;
+        text-align: center;
+        color: $black5;
+      }
+    }
+    .swiper_container {
+      width: 100%;
+      height: 450px;
+      position: relative;
+    }
+    .swiper-slide {
+      width: 370px;
+      height: 380px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      img {
+        transition: transform 0.9s ease;
+      }
+    }
+    .swiper-button-next {
+      &::after {
+        content: "\f061";
+        font-family: "font awesome 5 free";
+        font-weight: 700;
+        top: 217px;
+        right: 515px;
+        position: absolute;
+        font-size: 25px;
+        z-index: 5;
+        color: $black4;
+        transition: all 0.2s ease;
+      }
+      &:hover {
+        &::after {
+          color: $light_cyan2;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      &::after {
+        content: "\f060";
+        font-family: "font awesome 5 free";
+        font-weight: 700;
+        top: 217px;
+        left: 515px;
+        position: absolute;
+        font-size: 25px;
+        z-index: 4;
+        color: $black4;
+        transition: all 0.2s ease;
+      }
+      &:hover {
+        &::after {
+          color: $light_cyan2;
+        }
+      }
+    }
+    .swiper-pagination-horizontal {
+      bottom: var(--swiper-pagination-bottom, 8px);
+      top: var(--swiper-pagination-top, auto);
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    .swiper-pagination-bullet {
+      background-color: $light_cyan2;
+    }
+  }
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .cities_section {
+    padding-bottom: 60px;
+    .city_area {
+      .content {
+        padding-bottom: 50px;
+      }
+      .swiper_container {
+        height: 500px;
+      }
+      .swiper-slide {
+        width: 390px;
+        height: 420px;
+      }
+      .swiper-button-next {
+        &::after {
+          top: 240px;
+          right: 460px;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          top: 240px;
+          left: 460px;
+        }
+      }
+    }
+  }
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cities_section {
+    padding-bottom: 60px;
+    .city_area {
+      .content {
+        padding-bottom: 50px;
+      }
+      .swiper_container {
+        height: 470px;
+      }
+      .swiper-slide {
+        width: 370px;
+        height: 380px;
+      }
+      .swiper-button-next {
+        &::after {
+          top: 225px;
+          right: 394px;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          top: 225px;
+          left: 394px;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cities_section {
+    padding-bottom: 40px;
+    .city_area {
+      .content {
+        padding-bottom: 40px;
+      }
+      .swiper_container {
+        height: 440px;
+      }
+      .swiper-slide {
+        width: 340px;
+        height: 360px;
+      }
+      .swiper-button-next {
+        &::after {
+          top: 212px;
+          right: 280px;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          top: 212px;
+          left: 280px;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .cities_section {
+    padding-bottom: 40px;
+    .city_area {
+      .content {
+        padding-bottom: 40px;
+      }
+      .swiper_container {
+        height: 350px;
+      }
+      .swiper-slide {
+        width: 270px;
+        height: 280px;
+      }
+      .swiper-button-next {
+        &::after {
+          top: 167px;
+          right: 228px;
+          font-size: 21px;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          top: 167px;
+          left: 228px;
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  .cities_section {
+    padding-bottom: 40px;
+    .city_area {
+      .content {
+        padding-bottom: 40px;
+        .heading {
+          font-size: 26px;
+          line-height: 42px;
+          padding-bottom: unset;
+        }
+        .sub_heading {
+          font-size: 14px;
+          line-height: 22.6px;
+        }
+      }
+      .swiper_container {
+        height: 350px;
+      }
+      .swiper-slide {
+        width: 270px;
+        height: 280px;
+      }
+      .swiper-button-next {
+        &::after {
+          top: 169px;
+          right: 90px;
+          font-size: 20px;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          top: 169px;
+          left: 90px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  .cities_section {
+    padding-bottom: 40px;
+    .city_area {
+      .content {
+        padding-bottom: 40px;
+        .heading {
+          font-size: 26px;
+          line-height: 42px;
+          padding-bottom: unset;
+        }
+        .sub_heading {
+          font-size: 14px;
+          line-height: 22.6px;
+        }
+      }
+      .swiper_container {
+        height: 350px;
+      }
+      .swiper-slide {
+        width: 270px;
+        height: 280px;
+      }
+      .swiper-button-next {
+        &::after {
+          top: 169px;
+          right: 90px;
+          font-size: 20px;
+        }
+      }
+
+      .swiper-button-prev {
+        &::after {
+          top: 169px;
+          left: 90px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+}

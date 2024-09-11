@@ -1,0 +1,575 @@
+@import "../base/mixins.scss";
+@import "../base/varibles.scss";
+
+.home_benefit_section {
+  padding-bottom: 90px;
+  .home_benefit_area {
+    .left {
+      width: 100%;
+      background-color: $light_grey;
+      border-radius: 6px;
+      position: relative;
+      .content {
+        max-width: 437px;
+        padding: 34px 42px;
+        h3 {
+          color: $black4;
+          @include primary_font;
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 52px;
+          text-align: left;
+          word-spacing: 3px;
+          padding-bottom: 17px;
+        }
+        p {
+          max-width: 276px;
+          @include primary_font;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 25.6px;
+          text-align: left;
+          color: $black5;
+          padding-bottom: 25px;
+        }
+        .search_property_btn {
+          width: 167px;
+          height: 40px;
+          position: relative;
+          border-radius: 6px;
+          color: $white;
+          @include justifyCenter;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #7e81e7 -12.81%, #0f40b2 100%);
+            transition: opacity 1s ease;
+            z-index: -1;
+            opacity: 1;
+          }
+
+          &:hover::before {
+            background: linear-gradient(90deg, #61639f -12.81%, #03143a 100%);
+            opacity: 0.7;
+          }
+          z-index: 4;
+        }
+      }
+      .bottom_Image {
+        text-align: end;
+        .homeImage {
+          width: 438px;
+          height: 383px;
+          position: relative;
+          right: -105px;
+          top: 20px;
+          img {
+            @include img;
+          }
+        }
+      }
+    }
+    .right {
+      padding-top: 50px;
+      padding-left: 30px;
+      .inner_left {
+        .inner_content {
+          padding: 30px;
+          .benfit_image {
+            width: 64px;
+            height: 64px;
+            img {
+              @include img;
+            }
+          }
+          h4 {
+            padding-top: 15px;
+            @include primary_font;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: -0.5px;
+            text-align: left;
+            color: $navy3;
+          }
+          p {
+            padding-top: 12px;
+            @include primary_font;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            text-align: left;
+            color: $black5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        }
+      }
+      .inner_right {
+        .inner_content {
+          padding: 30px;
+          .benfit_image {
+            width: 64px;
+            height: 64px;
+            img {
+              @include img;
+            }
+          }
+          h4 {
+            padding-top: 15px;
+            @include primary_font;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: -0.5px;
+            text-align: left;
+            color: $navy3;
+          }
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            padding-top: 12px;
+            @include primary_font;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            text-align: left;
+            color: $black5;
+          }
+        }
+      }
+    }
+  }
+}
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home_benefit_section {
+    padding-bottom: 60px;
+    .home_benefit_area {
+      .left {
+        .content {
+          padding: 26px 32px;
+          h3 {
+            font-size: 28px;
+            line-height: 36px;
+            padding-bottom: 17px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 25.6px;
+            padding-bottom: 25px;
+          }
+          .search_property_btn {
+            width: 167px;
+            height: 40px;
+          }
+        }
+        .bottom_Image {
+          .homeImage {
+            width: 410px;
+            height: 349px;
+            right: -34px;
+            top: 20px;
+          }
+        }
+      }
+      .right {
+        padding-top: 50px;
+        padding-left: 30px;
+        .inner_left {
+          .inner_content {
+            padding: 20px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+            }
+            h4 {
+              font-size: 22px;
+              line-height: 30px;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 25.6px;
+            }
+          }
+        }
+        .inner_right {
+          .inner_content {
+            padding: 20px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+            }
+            h4 {
+              font-size: 22px;
+              line-height: 30px;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 25.6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+  .home_benefit_section {
+    padding-bottom: 40px;
+    .home_benefit_area {
+      .left {
+        .content {
+          padding: 20px 30px;
+          h3 {
+            font-size: 23px;
+            line-height: 31px;
+            padding-bottom: 13px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 25.6px;
+            padding-bottom: 25px;
+          }
+          .search_property_btn {
+            width: 167px;
+            height: 40px;
+          }
+        }
+        .bottom_Image {
+          .homeImage {
+            width: 313px;
+            height: 259px;
+            right: -34px;
+            top: 14px;
+          }
+        }
+      }
+      .right {
+        padding-top: 40px;
+        padding-left: 30px;
+        .inner_left {
+          .inner_content {
+            padding: 5px;
+            padding-bottom: 30px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 23.6px;
+            }
+          }
+        }
+        .inner_right {
+          .inner_content {
+            padding: 5px;
+            padding-bottom: 30px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 23.6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .home_benefit_section {
+    padding-bottom: 30px;
+    .home_benefit_area {
+      .left {
+        .content {
+          padding: 20px 30px;
+          h3 {
+            font-size: 23px;
+            line-height: 31px;
+            padding-bottom: 13px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 25.6px;
+            padding-bottom: 25px;
+          }
+          .search_property_btn {
+            width: 167px;
+            height: 40px;
+          }
+        }
+        .bottom_Image {
+          .homeImage {
+            width: 313px;
+            height: 259px;
+            right: -34px;
+            top: 14px;
+          }
+        }
+      }
+      .right {
+        padding-top: 40px;
+        padding-left: 30px;
+        .inner_left {
+          .inner_content {
+            padding: 5px;
+            padding-bottom: 30px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 23.6px;
+            }
+          }
+        }
+        .inner_right {
+          .inner_content {
+            padding: 5px;
+            padding-bottom: 30px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 23.6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  .home_benefit_section {
+    padding-bottom: 30px;
+    .home_benefit_area {
+      .left {
+        margin-bottom: 55px;
+        .content {
+          padding: 16px;
+          h3 {
+            font-size: 23px;
+            line-height: 31px;
+            padding-bottom: 13px;
+          }
+          p {
+            font-size: 15px;
+            line-height: 25.6px;
+            padding-bottom: 20px;
+          }
+          .search_property_btn {
+            width: 155px;
+            height: 40px;
+            font-size: 15px;
+          }
+        }
+        .bottom_Image {
+          .homeImage {
+            width: 313px;
+            height: 259px;
+            right: -34px;
+            top: 14px;
+          }
+        }
+      }
+      .right {
+        padding-top: unset;
+        padding-left: unset;
+        .inner_left {
+          .inner_content {
+            margin-bottom: 25px;
+            padding: unset;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+              margin: auto;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+              text-align: center;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 15px;
+              line-height: 20.6px;
+              text-align: center;
+            }
+          }
+        }
+        .inner_right {
+          .inner_content {
+            margin-bottom: 25px;
+            padding: unset;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+              margin: auto;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+              text-align: center;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 15px;
+              line-height: 20.6px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  .home_benefit_section {
+    padding-bottom: 30px;
+    .home_benefit_area {
+      .left {
+        margin-bottom: 25px;
+        .content {
+          padding: 20px 30px;
+          h3 {
+            font-size: 23px;
+            line-height: 31px;
+            padding-bottom: 13px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 25.6px;
+            padding-bottom: 25px;
+          }
+          .search_property_btn {
+            width: 167px;
+            height: 40px;
+          }
+        }
+        .bottom_Image {
+          .homeImage {
+            width: 313px;
+            height: 259px;
+            right: -34px;
+            top: 14px;
+          }
+        }
+      }
+      .right {
+        padding-top: unset;
+        padding-left: unset;
+        .inner_left {
+          .inner_content {
+            padding: 25px;
+
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+              margin: auto;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+              text-align: center;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 23.6px;
+              text-align: justify;
+            }
+          }
+        }
+        .inner_right {
+          .inner_content {
+            padding: 25px;
+            .benfit_image {
+              width: 64px;
+              height: 64px;
+              margin: auto;
+            }
+            h4 {
+              font-size: 18px;
+              line-height: 22px;
+              text-align: center;
+            }
+            p {
+              padding-top: 12px;
+              font-size: 16px;
+              line-height: 23.6px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+}

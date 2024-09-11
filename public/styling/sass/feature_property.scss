@@ -1,0 +1,616 @@
+@import "../base/mixins.scss";
+@import "../base/varibles.scss";
+
+.feature_property {
+  padding-bottom: 90px;
+
+  .feature_area {
+    .content {
+      text-align: center;
+      padding-bottom: 20px;
+      h3 {
+        @include primary_font;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 52px;
+        color: $black2;
+      }
+      p {
+        @include primary_font;
+        color: $black5;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25.6px;
+      }
+    }
+    .category_area {
+      position: relative;
+      margin: auto;
+      text-align: center;
+      .nav-tabs {
+        --bs-nav-tabs-border-width: none;
+        border-bottom: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: $black2;
+        padding-bottom: 40px;
+        .nav-link {
+          color: $black2;
+          &.active {
+            border: 1px solid rgb(52, 49, 49);
+            border-radius: 40px;
+            background-color: $white2;
+            color: $black4;
+            text-align: center;
+            @include primary_font;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+          }
+        }
+      }
+      .listing {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include primary_font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30.4px;
+        color: $black2;
+        transition: all 0.2s ease;
+        &:hover {
+          color: $light_cyan2;
+          svg {
+            color: $light_cyan2;
+          }
+        }
+        svg {
+          font-size: 15px;
+          color: $black2;
+          transition: color 0.2s ease;
+        }
+      }
+      .property_categries {
+        .content {
+          position: relative;
+          .imageBox {
+            width: 100%;
+            height: 446px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            &:hover {
+              img {
+                transform: scale(1.1);
+              }
+            }
+            img {
+              transition: transform 0.9s ease;
+              @include img;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.1);
+              pointer-events: none;
+              overflow: hidden;
+            }
+          }
+
+          .topInnerContent {
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            .title_1 {
+              width: 88px;
+              height: 33px;
+              color: $white;
+              border-radius: 33px;
+              @include justifyCenter;
+              background-color: $green;
+              text-transform: uppercase;
+              @include primary_font;
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 33px;
+              transition: all 1s ease;
+              &:hover {
+                background-color: #3e7067;
+              }
+            }
+            .title_2 {
+              width: 88px;
+              height: 33px;
+              color: $black4;
+              border-radius: 33px;
+              @include justifyCenter;
+              background-color: $yellow;
+              text-transform: uppercase;
+              @include primary_font;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 33px;
+              transition: all 1s ease;
+              &:hover {
+                background-color: #faf4c8;
+              }
+            }
+          }
+          .bottomInnerContent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-left: 40px;
+            margin-right: 10px;
+            margin-bottom: 50px;
+            text-align: start;
+            h4 {
+              @include primary_font;
+              font-size: 17px;
+              font-weight: 500;
+              line-height: 22.8px;
+              color: $white;
+              padding-bottom: 10px;
+            }
+            p {
+              @include primary_font;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 30.4px;
+              color: $white;
+              padding-bottom: 10px;
+              svg {
+                font-size: 16px;
+                padding-right: 10px;
+              }
+            }
+            .pricingBox {
+              display: flex;
+              align-items: center;
+              .inner_left {
+                width: calc(100% - 120px);
+                float: left;
+                ul {
+                  li {
+                    display: inline-block;
+                    color: $white;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    &:nth-child(1) {
+                      position: relative;
+                      padding-left: 0;
+                      &::after {
+                        content: "";
+                        width: 1.5px;
+                        height: 20px;
+                        background-color: $white;
+                        position: absolute;
+                        right: 0;
+                        top: 5px;
+                      }
+                    }
+                    &:nth-child(2) {
+                      position: relative;
+                      &::after {
+                        content: "";
+                        width: 1.5px;
+                        height: 20px;
+                        background-color: $white;
+                        position: absolute;
+                        right: 0;
+                        top: 5px;
+                      }
+                    }
+                    &:last-child {
+                      padding-right: 0;
+                    }
+                    .icons {
+                      width: 20px;
+                      height: 20px;
+                      display: inline-block;
+                      img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                      }
+                    }
+                    span {
+                      padding-left: 5px;
+                      @include primary_font;
+                      font-size: 15px;
+                      font-weight: 400;
+                      line-height: 30.4px;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+              .inner_right {
+                width: 120px;
+                float: right;
+                text-align: end;
+                @include primary_font;
+                font-size: 21px;
+                font-weight: 600;
+                line-height: 31.5px;
+                color: $white;
+                span {
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 18.5px;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .feature_property {
+    padding-bottom: 60px;
+    .feature_area {
+      .category_area {
+        .property_categries {
+          .content {
+            .imageBox {
+              height: 410px;
+            }
+            .bottomInnerContent {
+              margin-left: 10px;
+              h4 {
+                line-height: 30.8px;
+                padding-bottom: 5px;
+              }
+              p {
+                line-height: 22.4px;
+              }
+              .pricingBox {
+                .inner_left {
+                  width: calc(100% - 100px);
+                  ul {
+                    li {
+                      padding-left: 12px;
+                      padding-right: 12px;
+                    }
+                  }
+                }
+                .inner_right {
+                  width: 100px;
+                  font-size: 19px;
+                  span {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+  .feature_property {
+    padding-bottom: 40px;
+    .feature_area {
+      .content {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 29px;
+          line-height: 48px;
+        }
+      }
+      .category_area {
+        .nav-tabs {
+          gap: 10px;
+        }
+        .listing {
+          top: 43px;
+        }
+        .property_categries {
+          .content {
+            position: relative;
+            .imageBox {
+              height: 400px;
+            }
+            .bottomInnerContent {
+              margin-left: 30px;
+              .pricingBox {
+                .inner_left {
+                  ul {
+                    li {
+                      padding-left: 12px;
+                      padding-right: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .feature_property {
+    padding-bottom: 30px;
+    .feature_area {
+      .content {
+        h3 {
+          font-size: 29px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      .category_area {
+        .nav-tabs {
+          justify-content: start;
+          gap: 10px;
+        }
+        .listing {
+          right: 12px;
+          top: 4px;
+        }
+        .property_categries {
+          .content {
+            .imageBox {
+              height: 400px;
+            }
+
+            .bottomInnerContent {
+              margin-left: 10px;
+              margin-bottom: 40px;
+              h4 {
+                font-size: 17px;
+                line-height: 20.8px;
+                padding-bottom: 5px;
+              }
+              p {
+                font-size: 15px;
+                line-height: 25.4px;
+                padding-bottom: 5px;
+              }
+              .pricingBox {
+                .inner_left {
+                  width: calc(100% - 100px);
+                  ul {
+                    li {
+                      padding-left: 10px;
+                      padding-right: 10px;
+                    }
+                  }
+                }
+                .inner_right {
+                  width: 100px;
+                  font-size: 19px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  .feature_property {
+    padding-bottom: 30px;
+    .feature_area {
+      .content {
+        h3 {
+          font-size: 22px;
+          line-height: 28px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .category_area {
+        .nav-tabs {
+          justify-content: start;
+          gap: 10px;
+          flex-wrap: nowrap;
+          overflow: scroll;
+          padding-bottom: 25px;
+          .nav-link {
+            width: 138px;
+          }
+        }
+        ::-webkit-scrollbar {
+          width: 1px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: transparent;
+          border-radius: 2px;
+        }
+        .listing {
+          right: 0;
+          top: 59px;
+          font-size: 15px;
+        }
+        .property_categries {
+          .content {
+            .imageBox {
+              height: 400px;
+            }
+            .topInnerContent {
+              .title_1 {
+                width: 80px;
+                height: 30px;
+                font-size: 11px;
+              }
+              .title_2 {
+                width: 80px;
+                height: 30px;
+                font-size: 12px;
+              }
+            }
+
+            .bottomInnerContent {
+              margin-left: 25px;
+              margin-bottom: 40px;
+              h4 {
+                font-size: 17px;
+                line-height: 20.8px;
+                padding-bottom: 5px;
+              }
+              p {
+                font-size: 15px;
+                line-height: 25.4px;
+                padding-bottom: 5px;
+              }
+              .pricingBox {
+                .inner_left {
+                  width: calc(100% - 108px);
+                  ul {
+                    li {
+                      padding-left: 12px;
+                      padding-right: 12px;
+                    }
+                  }
+                }
+                .inner_right {
+                  width: 108px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  .feature_property {
+    padding-bottom: 30px;
+    .feature_area {
+      .content {
+        h3 {
+          font-size: 22px;
+          line-height: 28px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .category_area {
+        .nav-tabs {
+          justify-content: start;
+          gap: 10px;
+          flex-wrap: nowrap;
+          overflow: scroll;
+          padding-bottom: 25px;
+          .nav-link {
+            width: 138px;
+          }
+        }
+        ::-webkit-scrollbar {
+          width: 1px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: transparent;
+          border-radius: 2px;
+        }
+        .listing {
+          right: 0;
+          top: 59px;
+          font-size: 15px;
+        }
+        .property_categries {
+          .content {
+            .imageBox {
+              height: 400px;
+            }
+            .topInnerContent {
+              .title_1 {
+                width: 80px;
+                height: 30px;
+                font-size: 11px;
+              }
+              .title_2 {
+                width: 80px;
+                height: 30px;
+                font-size: 12px;
+              }
+            }
+            .bottomInnerContent {
+              margin-left: 25px;
+              margin-bottom: 40px;
+              h4 {
+                font-size: 17px;
+                line-height: 20.8px;
+                padding-bottom: 5px;
+              }
+              p {
+                font-size: 15px;
+                line-height: 25.4px;
+                padding-bottom: 5px;
+              }
+              .pricingBox {
+                .inner_left {
+                  width: calc(100% - 108px);
+                  ul {
+                    li {
+                      padding-left: 12px;
+                      padding-right: 12px;
+                    }
+                  }
+                }
+                .inner_right {
+                  width: 108px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+}

@@ -1,18 +1,269 @@
-@mixin img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@mixin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-@mixin clearFix{
-    &::after{
-        display: block;
-        content: '';
-        clear: both;
-    }
+@mixin clearFix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+@mixin primary_font {
+  font-family: "Plus Jakarta Sans", system-ui;
 }
 
-@mixin justifyCenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin btn_hover {
+  background: linear-gradient(90deg, #61639f -12.81%, #03143a 100%);
+}
+
+@mixin justifyCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+$browser-context: 16;
+@function rems($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function rem($pixels) {
+  @return #{$pixels}px;
+}
+
+// Transition
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+// Rotate
+@mixin rotate($rotate) {
+  -webkit-transform: rotate($rotate);
+  -moz-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin translate($translateX: false, $translateY: false) {
+  @if $translateY {
+    -webkit-transform: translateY($translateY);
+    -moz-transform: translateY($translateY);
+    -ms-transform: translateY($translateY);
+    -o-transform: translateY($translateY);
+    transform: translateY($translateY);
+  } @else {
+    -webkit-transform: translateX($translateX);
+    -moz-transform: translateX($translateX);
+    -ms-transform: translateX($translateX);
+    -o-transform: translateX($translateX);
+    transform: translateX($translateX);
+  }
+}
+
+@mixin background_image($image, $size: false, $position: false) {
+  background-image: url($image);
+  background-repeat: no-repeat;
+  @if $size {
+    background-size: $size;
+  } @else {
+    background-size: cover;
+  }
+
+  @if $position {
+    background-position: $position;
+  } @else {
+    background-position: center center;
+  }
+}
+@mixin box_shaddow($shaddow, $black_opacity) {
+  -webkit-box-shadow: 0px 0px $shaddow 0px rgba(0, 0, 0, $black_opacity);
+  -moz-box-shadow: 0px 0px $shaddow 0px rgba(0, 0, 0, $black_opacity);
+  box-shadow: 0px 0px $shaddow 0px rgba(0, 0, 0, $black_opacity);
+}
+
+@mixin skew($value1, $value2) {
+  -moz-transform: skew($value1, $value2);
+  -webkit-transform: skew($value1, $value2);
+  -o-transform: skew($value1, $value2);
+  -ms-transform: skew($value1, $value2);
+  transform: skew($value1, $value2);
+}
+
+@mixin gradient($to, $position, $first_color, $second_color) {
+  background: -webkit-linear-gradient($position, $first_color, $second_color);
+  background: -o-linear-gradient($position, $first_color, $second_color);
+  background: linear-gradient(to $to, $first_color, $second_color);
+}
+
+@mixin shaddow() {
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin center_block() {
+  display: table;
+  margin: 0 auto;
+}
+
+@mixin vertical_middle() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin equal_height() {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+// Slide Animation
+@mixin slide_animation($slide) {
+  -webkit-animation: $slide;
+  -moz-animation: $slide;
+  -ms-animation: $slide;
+  -o-animation: $slide;
+  animation: $slide;
+}
+@keyframes slide {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  // animation: smoothScroll 1s forwards; ADD THIS STYLE TO FIXED NAVBAR
+}
+
+// Placeholder color
+@mixin placeholder($color, $fontWeight: false) {
+  /* Chrome/Opera/Safari */
+  ::-webkit-input-placeholder {
+    color: $color;
+    @if $fontWeight {
+      font-weight: $fontWeight;
+    }
+  }
+  /* Firefox 19+ */
+  ::-moz-placeholder {
+    color: $color;
+    @if $fontWeight {
+      font-weight: $fontWeight;
+    }
+  }
+  /* IE 10+ */
+  :-ms-input-placeholder {
+    color: $color;
+    @if $fontWeight {
+      font-weight: $fontWeight;
+    }
+  }
+  /* Firefox 18- */
+  :-moz-placeholder {
+    color: $color;
+    @if $fontWeight {
+      font-weight: $fontWeight;
+    }
+  }
+}
+
+@mixin instagram() {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin google() {
+  background: linear-gradient(to bottom left, transparent 49%, #fbbc05 50%) 0
+      25%/48% 40%,
+    linear-gradient(to top left, transparent 49%, #fbbc05 50%) 0 75%/48% 40%,
+    linear-gradient(-40deg, transparent 53%, #ea4335 54%),
+    linear-gradient(45deg, transparent 46%, #4285f4 48%), #34a853;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin ioshidden() {
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+@-webkit-keyframes topToBottomAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes topToBottomAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
